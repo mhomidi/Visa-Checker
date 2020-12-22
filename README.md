@@ -4,6 +4,8 @@ An script for checking the Visa times in US embassies
 ------------------------
 
 # News
+23 Dec - Added UAE US embassy.
+
 23 Dec - Added Turkey US embassy.
 
 22 Dec - Added Armenia US embassy.
