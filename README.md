@@ -6,6 +6,7 @@ An script for checking the Visa times in US embassies
 # News
 
 22 Dec - Armenia US embessy added.
+
 23 Dec - Turkey US embessy added.
 
 
