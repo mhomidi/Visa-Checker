@@ -22,7 +22,7 @@ class AppDynamicsJob(unittest.TestCase):
 
     def test_app_dynamics_job(self):
         driver = self.driver
-        driver.get("https://ais.usvisa-info.com/en-am/niv/users/sign_in")
+        driver.get("https://ais.usvisa-info.com/en-tr/niv/users/sign_in")
         driver.find_element_by_id("user_email").clear()
         driver.find_element_by_id("user_email").send_keys(config.USER_EMAIL)
         driver.find_element_by_id("user_password").clear()
@@ -34,8 +34,12 @@ class AppDynamicsJob(unittest.TestCase):
         href = driver.find_element_by_xpath("//a[contains(text(),'Pay Visa Fee')]").get_property('href')
         driver.get(href)
         try:
+
             self.assertEqual("No Appointments Available",
-                         driver.find_element_by_xpath("//div[@id='paymentOptions']/div[2]/table/tbody/tr/td[2]").text)
+                             driver.find_element_by_xpath(
+                                 "//div[@id='paymentOptions']/div[2]/table/tbody/tr/td[2]").text)
+            self.assertEqual("No Appointments Available",
+                         driver.find_element_by_xpath("//div[@id='paymentOptions']/div[2]/table/tbody/tr[2]/td[2]").text)
         except:
             send_mail()
 
