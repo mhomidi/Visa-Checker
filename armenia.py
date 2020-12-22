@@ -3,12 +3,17 @@ from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import NoAlertPresentException
 import unittest
+
+from selenium.webdriver.chrome.options import Options
+
 import config
 
 
 class AppDynamicsJob(unittest.TestCase):
     def setUp(self):
-        self.driver = webdriver.Chrome(config.CHROME_DRIVER_PATH)
+        options = Options()
+        options.headless = True
+        self.driver = webdriver.Chrome(config.CHROME_DRIVER_PATH, chrome_options=options)
         self.driver.implicitly_wait(30)
         self.base_url = "https://www.google.com/"
         self.verificationErrors = []
