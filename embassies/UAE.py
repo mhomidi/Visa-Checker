@@ -40,7 +40,7 @@ class AppDynamicsJob(unittest.TestCase):
             self.assertEqual("No Appointments Available",
                          driver.find_element_by_xpath("//div[@id='paymentOptions']/div[2]/table/tbody/tr[2]/td[2]").text)
         except:
-            send_mail()
+            send_mail(country='UAE')
 
     def is_element_present(self, how, what):
         try:

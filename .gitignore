@@ -321,3 +321,4 @@ pip-selfcheck.json
 chromedriver
 config.py
 .idea
+test.py
