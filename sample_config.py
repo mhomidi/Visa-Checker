@@ -1,3 +1,18 @@
+
+
+# Visa Info
 USER_EMAIL = 'USER_EMAIL'
 PASSWORD = 'PASSWORD'
 CHROME_DRIVER_PATH = 'PATH'
+
+
+# Mailing info
+RECEIVER_MAIL = 'RECEIVER_MAIL'
+SENDER_MAIL = 'SENDER_MAIL'
+SUBJECT = 'Visa Time'
+PORT = 465
+SMTP_SERVER = 'SMTP_SERVER'
+SENDER_PASS = 'SENDER_PASS'
+TEXT = """Subject: {}
+
+A available time is in {}"""
