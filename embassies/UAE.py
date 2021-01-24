@@ -10,7 +10,7 @@ import config
 from utils import send_mail
 
 
-class AppDynamicsJob(unittest.TestCase):
+class DubaiChecker(unittest.TestCase):
     def setUp(self):
         options = Options()
         options.headless = True

@@ -10,7 +10,7 @@ import config
 from utils import send_mail
 
 
-class AppDynamicsJob(unittest.TestCase):
+class TurkeyChecker(unittest.TestCase):
     def setUp(self):
         options = Options()
         options.headless = True
@@ -40,6 +40,7 @@ class AppDynamicsJob(unittest.TestCase):
                                  "//div[@id='paymentOptions']/div[2]/table/tbody/tr/td[2]").text)
             self.assertEqual("No Appointments Available",
                          driver.find_element_by_xpath("//div[@id='paymentOptions']/div[2]/table/tbody/tr[2]/td[2]").text)
+            print('No Appointments Available in Turkey')
         except:
             send_mail(country='Turkey')
 
