@@ -4,6 +4,8 @@ An script for checking the Visa times in US embassies
 ------------------------
 
 # News
+24 Jan - Celery task scheduler configuration added.
+
 23 Dec - Email configuration is added.
 
 23 Dec - Added UAE US embassy.
