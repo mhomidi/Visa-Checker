@@ -1,6 +1,7 @@
 from datetime import timedelta
 from celery import Celery
 
+from config import CHECKING_PERIOD
 from embassies.armenia import ArmeniaChecker
 from embassies.turkey import TurkeyChecker
 
@@ -11,11 +12,11 @@ app.conf.update(
     CELERYBEAT_SCHEDULE={
         'turkey': {
             'task': 'tasks.celery.check_turkey',
-            'schedule': timedelta(seconds=30),
+            'schedule': timedelta(minutes=CHECKING_PERIOD),
         },
         'armenia': {
             'task': 'tasks.celery.check_armenia',
-            'schedule': timedelta(seconds=30),
+            'schedule': timedelta(minutes=CHECKING_PERIOD),
         }
     }
 )

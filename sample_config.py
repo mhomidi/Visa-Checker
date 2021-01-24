@@ -16,3 +16,6 @@ SENDER_PASS = 'SENDER_PASS'
 TEXT = """Subject: {}
 
 A available time is in {}"""
+
+# cron config
+CHECKING_PERIOD = 5
